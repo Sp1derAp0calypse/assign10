@@ -1,33 +1,17 @@
+import { useState } from 'react'
 import './App.css'
-
-function Welcome() {
-  return <h1>Hello?</h1>
-}
-
-function Footer() {
-  return (
-  <footer>
-    <p>I need a bigger gun</p>
-  </footer>
-  );
-}
-
-function Content() {
-  return (
-    <>
-      <p>Is this thing on?</p>
-      <p>Am I all alone?</p>
-    </>
-  );
-}
+import GoButton from './GoButton'
+import GoLabel from './GoLabel'
 
 function App() {
-
+  const [goLevel, updateGo] = useState(1);
+  const incrementGo = () => updateGo(goLevel * 2);
   return (
     <>
-      <Welcome />
-      <Content />
-      <Footer />
+      <GoButton goButtonFunction={incrementGo} />
+      <br />
+      <br />
+      <GoLabel numToDisplay={goLevel} />
     </>
   )
 }

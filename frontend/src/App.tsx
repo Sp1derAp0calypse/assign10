@@ -1,17 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import GoButton from './GoButton'
-import GoLabel from './GoLabel'
+import BowlerList from './components/BowlerList'
+import Heading from './components/heading'
 
 function App() {
-  const [goLevel, updateGo] = useState(1);
-  const incrementGo = () => updateGo(goLevel * 2);
   return (
     <>
-      <GoButton goButtonFunction={incrementGo} />
-      <br />
-      <br />
-      <GoLabel numToDisplay={goLevel} />
+      <Heading />
+      <BowlerList />
     </>
   )
 }

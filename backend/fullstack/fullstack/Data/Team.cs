@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 namespace fullstack;
-
 public partial class Team
 {
     public int TeamId { get; set; }
